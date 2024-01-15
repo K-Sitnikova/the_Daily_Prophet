@@ -1,4 +1,4 @@
-## My attempt at creating the 1st page of The Daily Prophet on html + css
+## My attempt at creating the 1st page of The Daily Prophet on html + scss
 
 [The original page](https://i.ibb.co/Nx17wQ7/premium-gallery-01-the-daily-prophet-bulgaria-ireland-print-scaled.jpg)
 

@@ -46,12 +46,21 @@
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 10px;
     position: relative;
+    &-wrapper {
+      position: absolute;
+      transform: translate(10%, 5%);
+    }
     &-header {
       font-size: 55px;
-      position: absolute;
       text-align: center;
-      left: 52px;
-      top: 30px;
+    }
+    &-wrapper {
+      transition: 1s;
+      z-index: 1;
+      &:hover,
+      &:focus {
+        opacity: 0;
+      }
     }
     &-header span {
       font-size: 140px;
@@ -72,15 +81,15 @@
       animation-delay: calc(.1s * var(--i));
     }
     &-column {
-      font-size: 16px;
+      font-size: 18px;
       margin-top: 10px;
       line-height: 18px;
     }
     &-footer {
       position: absolute;
-      bottom: 0;
       max-width: 85%;
       left: 40px;
+      padding-top: 50px;
     }
   }
 }
@@ -106,5 +115,17 @@
   }
   20% {
     transform: translateY(-20px)
+  }
+}
+
+@keyframes hideHeader {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
   }
 }

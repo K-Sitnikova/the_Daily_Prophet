@@ -2,17 +2,27 @@
   &__wrapper {
     display: flex;
     align-items: center;
+    &:hover {
+      .header__left-hand {
+        transform: rotate(45deg);
+      }
+      .header__right-hand {
+        transform: rotate(-45deg);
+      }
+    }
   }
   &__left-hand,
   &__right-hand {
       width: 60px;
       height: 55px;
+      transition: 1s;
   }
 
   &__text {
     font-size: 80px;
     margin-left: 10px;
     margin-right: 10px;
+    font-weight: bold;
   }
 }
 svg {

@@ -1,0 +1,110 @@
+.main {
+  &__announces {
+    display: flex;
+    align-items: center;
+    &-right,
+    &-left {
+      border-top: 4px double black;
+      border-bottom: 4px double black;
+    }
+    &-left {
+      font-size: 35px;
+      text-align: center;
+      font-family: 'Cinzel Decorative', serif;
+      font-weight: bold;
+      margin-right: 15px;
+      text-transform: uppercase;
+      position: relative;
+      &:before {
+        content: "";
+        border-radius: 46%;
+        border-left: 2px solid black;
+        border-right: 2px solid black;
+        width: 120px;
+        height: 88px;
+        display: block;
+        position: absolute;
+        transform: translate(22%);
+      }
+    }
+    &-right {
+      display: flex;
+      align-items: center;
+    }
+  }
+  &__header {
+    margin-top: 20px;
+    background-color: #000001;
+    &-text {
+      color: #E7E2DC;
+      text-align: center;
+      font-size: 52px;
+    }
+  }
+  &__news {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+    position: relative;
+    &-header {
+      font-size: 55px;
+      position: absolute;
+      text-align: center;
+      left: 52px;
+      top: 30px;
+    }
+    &-header span {
+      font-size: 140px;
+      position: relative;
+      text-align: center;
+      display: inline-block;
+      font-weight: bold;
+      text-shadow:
+              8px 10px 1px #EFE8DE,
+              -6px -13px 1px #EFE8DE,
+              15px 16px 1px #EFE8DE,
+              -4px -20px 1px #EFE8DE,
+              17px 14px 1px #EFE8DE,
+              -14px -13px 1px #EFE8DE,
+              21px 7px 1px #EFE8DE,
+              -21px -6px 1px #EFE8DE;
+      animation: waviy 5s infinite;
+      animation-delay: calc(.1s * var(--i));
+    }
+    &-column {
+      font-size: 16px;
+      margin-top: 10px;
+      line-height: 18px;
+    }
+    &-footer {
+      position: absolute;
+      bottom: 0;
+      max-width: 85%;
+      left: 40px;
+    }
+  }
+}
+
+.announce {
+  &__header,
+  &__text {
+    line-height: 18px;
+    font-size: 14px;
+  }
+  &__header {
+    font-weight: bold;
+  }
+}
+
+.announce:not(:last-child) {
+  margin-right: 10px;
+}
+
+@keyframes waviy {
+  0%,40%,100% {
+    transform: translateY(0)
+  }
+  20% {
+    transform: translateY(-20px)
+  }
+}

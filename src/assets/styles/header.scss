@@ -1,0 +1,20 @@
+.header {
+  &__wrapper {
+    display: flex;
+    align-items: center;
+  }
+  &__left-hand,
+  &__right-hand {
+      width: 60px;
+      height: 55px;
+  }
+
+  &__text {
+    font-size: 80px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+svg {
+  fill: #C1AB7B;
+}

@@ -1,0 +1,36 @@
+.footer {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px;
+
+  &__block {
+    border-top: 4px double black;
+    border-bottom: 4px double black;
+    font-size: 16px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 30px 1fr;
+    grid-gap: 10px;
+    padding: 10px;
+    &-img {
+      max-width: 30px;
+      transform: rotate(-45deg);
+      animation: magic 5s infinite;;
+    }
+  }
+
+  &__block:nth-child(3) {
+    grid-column-start: 3;
+    grid-column-end: 5;
+  }
+}
+
+@keyframes magic {
+    100%, 0% {
+      transform: rotate(-45deg);
+    }
+    50% {
+      transform: rotate(-85deg);
+    }
+
+}

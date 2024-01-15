@@ -1,0 +1,24 @@
+body {
+  background-color: #EFE8DE;
+  font-family: 'Grenze Gotisch', serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 796px;
+  margin: 0 auto;
+}
+
+.container {
+  margin: 0 55px;
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+span {
+  line-height: 160px;
+  letter-spacing: 12px;
+}
